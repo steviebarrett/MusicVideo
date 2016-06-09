@@ -15,6 +15,8 @@
 		DCE6A1A41D0991800073C9FA /* MusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A1A31D0991800073C9FA /* MusicVideoTests.swift */; };
 		DCE6A1AF1D0991800073C9FA /* MusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A1AE1D0991800073C9FA /* MusicVideoUITests.swift */; };
 		DCE6A1C11D099DDF0073C9FA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A1C01D099DDF0073C9FA /* APIManager.swift */; };
+		DCE6A1C41D09AFE90073C9FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A1C31D09AFE90073C9FA /* Constants.swift */; };
+		DCE6A1C61D09B1C50073C9FA /* MusicVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A1C51D09B1C50073C9FA /* MusicVideo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DCE6A1AE1D0991800073C9FA /* MusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoUITests.swift; sourceTree = "<group>"; };
 		DCE6A1B01D0991800073C9FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCE6A1C01D099DDF0073C9FA /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DCE6A1C31D09AFE90073C9FA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DCE6A1C51D09B1C50073C9FA /* MusicVideo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		DCE6A18D1D0991800073C9FA /* MusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				DCE6A1C21D09AFD40073C9FA /* Utils */,
 				DCE6A1BF1D09992C0073C9FA /* Supporting Files */,
 				DCE6A1BC1D0998A70073C9FA /* Model */,
 				DCE6A1BD1D0998B50073C9FA /* Controller */,
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				DCE6A1C01D099DDF0073C9FA /* APIManager.swift */,
+				DCE6A1C51D09B1C50073C9FA /* MusicVideo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 				DCE6A19A1D0991800073C9FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCE6A1C21D09AFD40073C9FA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DCE6A1C31D09AFE90073C9FA /* Constants.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +308,9 @@
 			files = (
 				DCE6A1C11D099DDF0073C9FA /* APIManager.swift in Sources */,
 				DCE6A1911D0991800073C9FA /* ViewController.swift in Sources */,
+				DCE6A1C61D09B1C50073C9FA /* MusicVideo.swift in Sources */,
 				DCE6A18F1D0991800073C9FA /* AppDelegate.swift in Sources */,
+				DCE6A1C41D09AFE90073C9FA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

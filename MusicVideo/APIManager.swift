@@ -35,7 +35,7 @@ class APIManager {
                     NSJSONSerialization requires to Do / Try / Catch
                     Converts the NSDATA into a JSON Object and cast it to a Dictionary */
                     
-                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String: AnyObject] {
+                    if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary {
                         
                         print(json)
                         
