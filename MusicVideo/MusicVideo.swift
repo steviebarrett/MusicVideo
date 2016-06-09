@@ -13,8 +13,15 @@ class Videos {
     //Data encapsulation
     
     private var _vName:String
+    private var _vRights:String     //TODO
+    private var _vPrice:String      //TODO
     private var _vImageUrl:String
+    private var _vArtist:String     //TODO
     private var _vVideoUrl:String
+    private var _vImid:String       //TODO
+    private var _vGenre:String      //TODO
+    private var _vLinkToiTunes:String    //TODO
+    private var _vReleaseDate:String    //TODO
     
     //Make a getter
     
