@@ -37,7 +37,7 @@ class MusicVideoTVC: UITableViewController {
         
         switch reachabilityStatus {
         case NOACCESS :
-            view.backgroundColor = UIColor.redColor()
+            //view.backgroundColor = UIColor.redColor()
             //move back to main queue
             dispatch_async(dispatch_get_main_queue()) {
                 let alert = UIAlertController(title: "No Internet Access", message: "Please make sure you are connected to the Internet", preferredStyle: .Alert)
@@ -65,7 +65,7 @@ class MusicVideoTVC: UITableViewController {
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         default:
-            view.backgroundColor = UIColor.greenColor()
+            //view.backgroundColor = UIColor.greenColor()
             if videos.count > 0 {
                 print("Do not refresh API")
             } else {
@@ -77,7 +77,7 @@ class MusicVideoTVC: UITableViewController {
     func runAPI() {
         //Call API
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=100/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/us/rss/topmusicvideos/limit=200/json", completion: didLoadData)
     }
     
     //Is called just as the object is about to be deallocated
@@ -99,15 +99,16 @@ class MusicVideoTVC: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return videos.count
     }
-
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+    private struct storyboard {
+        static let cellReuseIdentifier = "cell"
+    }
 
-        let video = videos[indexPath.row]
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        cell.textLabel?.text = ("\(indexPath.row + 1)")
-        cell.detailTextLabel?.text = video.vName
+        let cell = tableView.dequeueReusableCellWithIdentifier(storyboard.cellReuseIdentifier, forIndexPath: indexPath) as! MusicVideoTableViewCell
+
+        cell.video = videos[indexPath.row]
 
         return cell
     }
