@@ -20,6 +20,7 @@
 		DCE6A2121D0AD5F10073C9FA /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A2111D0AD5F10073C9FA /* Reachability.m */; };
 		DCE6A2141D1001EB0073C9FA /* MusicVideoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A2131D1001EB0073C9FA /* MusicVideoTVC.swift */; };
 		DCE6A2161D10116A0073C9FA /* MusicVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A2151D10116A0073C9FA /* MusicVideoTableViewCell.swift */; };
+		DCE6A21C1D12B6AD0073C9FA /* MusicVideoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE6A21B1D12B6AD0073C9FA /* MusicVideoDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		DCE6A2111D0AD5F10073C9FA /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		DCE6A2131D1001EB0073C9FA /* MusicVideoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTVC.swift; sourceTree = "<group>"; };
 		DCE6A2151D10116A0073C9FA /* MusicVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoTableViewCell.swift; sourceTree = "<group>"; };
+		DCE6A21B1D12B6AD0073C9FA /* MusicVideoDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicVideoDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		DCE6A1BD1D0998B50073C9FA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DCE6A21B1D12B6AD0073C9FA /* MusicVideoDetailVC.swift */,
 				DCE6A2131D1001EB0073C9FA /* MusicVideoTVC.swift */,
 				DCE6A2151D10116A0073C9FA /* MusicVideoTableViewCell.swift */,
 				DCE6A1901D0991800073C9FA /* ViewController.swift */,
@@ -328,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCE6A1C11D099DDF0073C9FA /* APIManager.swift in Sources */,
+				DCE6A21C1D12B6AD0073C9FA /* MusicVideoDetailVC.swift in Sources */,
 				DCE6A1911D0991800073C9FA /* ViewController.swift in Sources */,
 				DCE6A1C61D09B1C50073C9FA /* MusicVideo.swift in Sources */,
 				DCE6A2161D10116A0073C9FA /* MusicVideoTableViewCell.swift in Sources */,
