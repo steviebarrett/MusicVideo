@@ -22,6 +22,9 @@ class MusicVideoTableViewCell: UITableViewCell {
     
     func updateCell() {
         
+        musicTitle.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        rank.font = UIFont.preferredFontForTextStyle(UIFontTextStyleSubheadline)
+        
         musicTitle.text = video?.vName
         rank.text = ("\(video!.vRank)")
         //musicImage.image = UIImage(named: "imageNotAvailable")
@@ -32,7 +35,7 @@ class MusicVideoTableViewCell: UITableViewCell {
         } else {
             getVideoImage(video!, imageView: musicImage)
             print("Get images in background thread")
-        } 
+        }
     }
     
     func getVideoImage(video: Videos, imageView: UIImageView) {
