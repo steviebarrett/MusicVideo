@@ -22,10 +22,24 @@ class SettingTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Settings"
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MusicVideoTVC.preferredFontChange), name: UIContentSizeCategoryDidChangeNotification, object: nil)
         
         tableView.alwaysBounceVertical = false  //don't bounce the table view (cannot scroll)
+        
+        touchId.on = NSUserDefaults.standardUserDefaults().boolForKey("SecSetting")
 
+    }
+    
+    @IBAction func touchIdSecurity(sender: UISwitch) {
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if touchId.on {
+            defaults.setBool(true, forKey: "SecSetting")
+        } else {
+            defaults.setBool(false, forKey: "SecSetting")
+        }
     }
     
     func preferredFontChange() {
