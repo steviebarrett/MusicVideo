@@ -160,7 +160,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-Q9-EJE">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-Q9-EJE">
                                                     <rect key="frame" x="535" y="26" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="touchIdSecurity:" destination="Uiq-bu-ojd" eventType="valueChanged" id="ViO-3T-Hks"/>
@@ -212,7 +212,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-Dl-Bgp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-Dl-Bgp">
                                                     <rect key="frame" x="8" y="8" width="584" height="75"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -234,8 +234,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-2F-0fK">
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-2F-0fK">
                                                     <rect key="frame" x="46" y="27" width="509" height="31"/>
+                                                    <connections>
+                                                        <action selector="valueChanged:" destination="Uiq-bu-ojd" eventType="valueChanged" id="ekJ-m2-noP"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <constraints>
@@ -266,6 +269,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i41-Ra-3JR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="772" y="909"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="irU-hm-nNV">
+            <objects>
+                <viewController id="T6f-6l-DF4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4gB-Di-8Rs"/>
+                        <viewControllerLayoutGuide type="bottom" id="jJI-4z-qzH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cm0-6X-Bsv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1M-CR-xla" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1446" y="915"/>
         </scene>
         <!--Music Video DetailVC-->
         <scene sceneID="rbj-td-Mfz">
@@ -377,13 +398,6 @@
                                 <exclude reference="OQH-bi-wlS"/>
                                 <exclude reference="OuI-p5-sUD"/>
                                 <exclude reference="SD8-Ay-Ojt"/>
-                                <exclude reference="DmK-dH-Tfk"/>
-                                <exclude reference="kW4-ns-jY7"/>
-                                <exclude reference="nlV-og-8mu"/>
-                                <exclude reference="y6s-ci-seX"/>
-                                <exclude reference="CFe-cQ-5Cq"/>
-                                <exclude reference="wDj-Aj-17l"/>
-                                <exclude reference="HbO-pt-j1E"/>
                                 <exclude reference="MT5-rP-W3c"/>
                                 <include reference="Ofb-OY-6H7"/>
                                 <exclude reference="VmX-Ry-ttk"/>
@@ -391,7 +405,14 @@
                                 <exclude reference="icg-H8-YhK"/>
                                 <include reference="xJm-4g-gJb"/>
                                 <exclude reference="ypl-mZ-erL"/>
+                                <exclude reference="DmK-dH-Tfk"/>
+                                <exclude reference="kW4-ns-jY7"/>
+                                <exclude reference="nlV-og-8mu"/>
+                                <exclude reference="y6s-ci-seX"/>
+                                <exclude reference="CFe-cQ-5Cq"/>
+                                <exclude reference="wDj-Aj-17l"/>
                                 <include reference="2dz-jR-Ou5"/>
+                                <exclude reference="HbO-pt-j1E"/>
                             </mask>
                         </variation>
                     </view>
