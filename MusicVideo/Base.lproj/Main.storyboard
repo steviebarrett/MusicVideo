@@ -80,6 +80,12 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="aa9-pr-LVI"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="pKM-w3-Gpx">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="768-4H-kba" eventType="valueChanged" id="jAE-NW-CX0"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9Z-ud-02S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1M-CR-xla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="915"/>
+            <point key="canvasLocation" x="1489" y="909"/>
         </scene>
         <!--Music Video DetailVC-->
         <scene sceneID="rbj-td-Mfz">
