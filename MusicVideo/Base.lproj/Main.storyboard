@@ -219,17 +219,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdi-Dl-Bgp">
-                                                    <rect key="frame" x="8" y="8" width="584" height="75"/>
+                                                    <rect key="frame" x="530" y="24" width="62" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="62" id="zyx-5O-b2x"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Videos to Display" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSP-dq-VH8">
+                                                    <rect key="frame" x="8" y="21" width="284" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="284" id="3uO-iu-dWm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="vdi-Dl-Bgp" firstAttribute="top" secondItem="oMY-hQ-MTE" secondAttribute="topMargin" id="7vR-HX-IXm"/>
-                                                <constraint firstItem="vdi-Dl-Bgp" firstAttribute="trailing" secondItem="oMY-hQ-MTE" secondAttribute="trailingMargin" id="Phz-1r-wyb"/>
-                                                <constraint firstItem="vdi-Dl-Bgp" firstAttribute="leading" secondItem="oMY-hQ-MTE" secondAttribute="leadingMargin" id="Vkz-ue-ORv"/>
-                                                <constraint firstAttribute="bottom" secondItem="vdi-Dl-Bgp" secondAttribute="bottom" id="i3K-BT-fuT"/>
+                                                <constraint firstItem="pSP-dq-VH8" firstAttribute="leading" secondItem="oMY-hQ-MTE" secondAttribute="leadingMargin" id="5Cb-3D-Ipx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pSP-dq-VH8" secondAttribute="bottom" constant="5" id="5an-fT-E8c"/>
+                                                <constraint firstItem="vdi-Dl-Bgp" firstAttribute="centerY" secondItem="oMY-hQ-MTE" secondAttribute="centerY" id="A4j-Xm-PfX"/>
+                                                <constraint firstItem="pSP-dq-VH8" firstAttribute="top" secondItem="oMY-hQ-MTE" secondAttribute="topMargin" constant="13" id="Gjm-2g-WuV"/>
+                                                <constraint firstItem="vdi-Dl-Bgp" firstAttribute="trailing" secondItem="oMY-hQ-MTE" secondAttribute="trailingMargin" id="HNL-PS-AvW"/>
+                                                <constraint firstItem="vdi-Dl-Bgp" firstAttribute="top" secondItem="oMY-hQ-MTE" secondAttribute="topMargin" constant="16" id="ekM-2R-K8I"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -246,11 +260,24 @@
                                                         <action selector="valueChanged:" destination="Uiq-bu-ojd" eventType="valueChanged" id="ekJ-m2-noP"/>
                                                     </connections>
                                                 </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the slider below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF4-yP-bI7">
+                                                    <rect key="frame" x="139" y="0.0" width="321" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="321" id="GMB-J9-tn8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="fnz-2F-0fK" firstAttribute="centerX" secondItem="05R-68-mpR" secondAttribute="centerX" id="bOT-Me-29O"/>
-                                                <constraint firstItem="fnz-2F-0fK" firstAttribute="centerY" secondItem="05R-68-mpR" secondAttribute="centerY" id="eef-sP-TKM"/>
-                                                <constraint firstItem="fnz-2F-0fK" firstAttribute="leading" secondItem="05R-68-mpR" secondAttribute="leadingMargin" constant="40" id="mhu-Wk-7gJ"/>
+                                                <constraint firstItem="fnz-2F-0fK" firstAttribute="top" secondItem="gF4-yP-bI7" secondAttribute="bottom" constant="6" id="0Sm-Og-fjG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fnz-2F-0fK" secondAttribute="bottom" constant="18" id="5Pf-8J-orB"/>
+                                                <constraint firstItem="fnz-2F-0fK" firstAttribute="centerX" secondItem="05R-68-mpR" secondAttribute="centerX" id="7jM-Xu-73z"/>
+                                                <constraint firstItem="gF4-yP-bI7" firstAttribute="top" secondItem="05R-68-mpR" secondAttribute="top" id="OoB-qR-fKG"/>
+                                                <constraint firstItem="fnz-2F-0fK" firstAttribute="leading" secondItem="05R-68-mpR" secondAttribute="leadingMargin" constant="40" id="h86-Ay-l4W"/>
+                                                <constraint firstItem="fnz-2F-0fK" firstAttribute="centerY" secondItem="05R-68-mpR" secondAttribute="centerY" id="iJ7-1r-9sA"/>
+                                                <constraint firstItem="gF4-yP-bI7" firstAttribute="centerX" secondItem="05R-68-mpR" secondAttribute="centerX" id="zPN-7k-Xfv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -266,7 +293,9 @@
                         <outlet property="APICnt" destination="vdi-Dl-Bgp" id="fN3-qk-t4N"/>
                         <outlet property="aboutDisplay" destination="A98-5b-K9z" id="SWS-RS-yUa"/>
                         <outlet property="bestImageDisplay" destination="CIr-4H-3px" id="IFL-Pi-44e"/>
+                        <outlet property="dragTheSliderDisplay" destination="gF4-yP-bI7" id="QJE-xx-Olm"/>
                         <outlet property="feedbackDisplay" destination="sN5-yJ-4dM" id="uFR-Ws-MzQ"/>
+                        <outlet property="numberOfVideosToDisplay" destination="pSP-dq-VH8" id="Wy5-FE-Svs"/>
                         <outlet property="securityDisplay" destination="Nyl-hs-qwZ" id="fQK-U4-dWD"/>
                         <outlet property="sliderCnt" destination="fnz-2F-0fK" id="CM2-iv-vQT"/>
                         <outlet property="touchId" destination="1bF-Q9-EJE" id="hOk-xJ-14B"/>
@@ -432,6 +461,9 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="dr5-1V-GXA"/>
                         <barButtonItem systemItem="action" id="Rpn-5d-Cfr">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="socialMedia:" destination="zq6-Wo-aAi" id="zga-p7-lkU"/>
+                            </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <connections>
