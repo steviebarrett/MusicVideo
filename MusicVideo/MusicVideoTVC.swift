@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
+class MusicVideoTVC: UITableViewController {
 
     var videos = [Videos]()
     
@@ -52,7 +52,7 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
         
         resultSearchController.dimsBackgroundDuringPresentation = false
         
-        resultSearchController.searchBar.placeholder = "Search for Artist"
+        resultSearchController.searchBar.placeholder = "Search for Artist, Name, or Rank"
         
         resultSearchController.searchBar.searchBarStyle = UISearchBarStyle.Prominent
         
@@ -176,42 +176,6 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
 
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
     // MARK: - Navigation
 
@@ -232,15 +196,14 @@ class MusicVideoTVC: UITableViewController, UISearchResultsUpdating {
         }
     }
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        searchController.searchBar.text!.lowercaseString
-        filterSearch(searchController.searchBar.text!)
-    }
-    
     func filterSearch(searchText: String) {
         filterSearch = videos.filter { videos in
-            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString)
+            return videos.vArtist.lowercaseString.containsString(searchText.lowercaseString) ||
+                videos.vName.lowercaseString.containsString(searchText.lowercaseString) ||
+                "\(videos.vRank)".lowercaseString.containsString(searchText.lowercaseString)
         }
         tableView.reloadData()
     }
 }
+
+
