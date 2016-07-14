@@ -68,9 +68,9 @@ class Videos {
         return _vReleaseDte
     }
     
-    init(data: JSONDictionary) {
+    init(data: JSONDictionary, highRes:Bool) {
         
-        //If we do not initialize akk properties we will get an error message
+        //If we do not initialize all properties we will get an error message
         //Return from initalizer without initalizing all stored properties
         
         //Video name 
@@ -97,10 +97,11 @@ class Videos {
         }
         
         //The Video Image
+        let imageRes:String = highRes ? "600x600" : "100x100"
         if let img = data["im:image"] as? JSONArray,
             image = img[2] as? JSONDictionary,
             immage = image["label"] as? String {
-                self._vImageUrl = immage.stringByReplacingOccurrencesOfString("100x100", withString: "600x600")
+                self._vImageUrl = immage.stringByReplacingOccurrencesOfString("100x100", withString: imageRes)
         } else {
             _vImageUrl = ""
         }

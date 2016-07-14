@@ -132,7 +132,9 @@ class MusicVideoTVC: UITableViewController {
         
         //Call API
         let api = APIManager()
-        api.loadData("https://itunes.apple.com/gb/rss/topmusicvideos/limit=\(limit)/json", completion: didLoadData)
+        api.loadData("https://itunes.apple.com/gb/rss/topmusicvideos/limit=\(limit)/json",
+            reachabilityStatus: reachabilityStatus,
+            completion: didLoadData)
     }
     
     //Is called just as the object is about to be deallocated

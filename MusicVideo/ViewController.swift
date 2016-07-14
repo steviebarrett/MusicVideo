@@ -24,11 +24,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityStatusChanged), name: "ReachStatusChanged", object: nil)
         
         reachabilityStatusChanged()
-/*
-        //Call API
-        let api = APIManager()
-        api.loadData("https://itunes.apple.com/gb/rss/topmusicvideos/limit=10/json", completion: didLoadData)
-*/
     }
 
     func didLoadData(videos: [Videos]) {

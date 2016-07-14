@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import LocalAuthentication
 
 class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
 
@@ -21,6 +22,7 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var APICnt: UILabel!
     @IBOutlet weak var dragTheSliderDisplay: UILabel!
     @IBOutlet weak var sliderCnt: UISlider!
+    @IBOutlet weak var noTouchId: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +55,17 @@ class SettingTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     @IBAction func touchIdSecurity(sender: UISwitch) {
         
+        let authenticationContext = LAContext()
+        var error: NSError?
+        let isTouchEnabled = authenticationContext.canEvaluatePolicy(.DeviceOwnerAuthenticationWithBiometrics, error: &error)
+        
+        if !isTouchEnabled {
+            noTouchId.text = "Touch ID not available"
+            sender.setOn(false, animated: false)
+        }
+        
         let defaults = NSUserDefaults.standardUserDefaults()
-        if touchId.on {
+        if touchId.on && isTouchEnabled {
             defaults.setBool(true, forKey: "SecSetting")
         } else {
             defaults.setBool(false, forKey: "SecSetting")

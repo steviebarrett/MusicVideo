@@ -10,7 +10,7 @@ import Foundation
 
 class APIManager {
     
-    func loadData(urlString:String, completion: [Videos] -> Void) {
+    func loadData(urlString:String, reachabilityStatus:String, completion: [Videos] -> Void) {
         
         let config = NSURLSessionConfiguration.ephemeralSessionConfiguration()
         
@@ -38,7 +38,8 @@ class APIManager {
                         
                         var videos = [Videos]()
                         for (index, entry) in entries.enumerate() {
-                            let entry = Videos(data: entry as! JSONDictionary)
+                            let highRes = reachabilityStatus == WIFI ? true : false
+                            let entry = Videos(data: entry as! JSONDictionary, highRes: highRes)
                             entry.vRank = index + 1
                             videos.append(entry)
                         }

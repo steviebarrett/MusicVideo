@@ -160,7 +160,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyl-hs-qwZ">
                                                     <rect key="frame" x="8" y="31" width="101" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="101" id="BfV-ay-Al6"/>
+                                                        <constraint firstAttribute="width" constant="101" id="Qoe-Du-DFd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -172,13 +172,24 @@
                                                         <action selector="touchIdSecurity:" destination="Uiq-bu-ojd" eventType="valueChanged" id="ViO-3T-Hks"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSB-cO-xsf">
+                                                    <rect key="frame" x="8" y="54" width="478" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="478" id="gid-9N-hCW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="1bF-Q9-EJE" secondAttribute="trailing" constant="8" id="0SI-OX-8EZ"/>
-                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="centerY" secondItem="EpP-7F-ZhC" secondAttribute="centerY" id="6ub-ST-gW1"/>
-                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="centerY" secondItem="1bF-Q9-EJE" secondAttribute="centerY" id="L5D-Yh-d8Y"/>
-                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="top" secondItem="EpP-7F-ZhC" secondAttribute="topMargin" constant="23" id="moO-lG-bUs"/>
-                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="leading" secondItem="EpP-7F-ZhC" secondAttribute="leadingMargin" id="zDW-8x-8yB"/>
+                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="leading" secondItem="cSB-cO-xsf" secondAttribute="leading" id="Egp-Zg-eBF"/>
+                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="centerY" secondItem="EpP-7F-ZhC" secondAttribute="centerY" id="VnN-xu-NUf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="1bF-Q9-EJE" secondAttribute="trailing" constant="8" id="gkl-4A-dZW"/>
+                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="centerY" secondItem="1bF-Q9-EJE" secondAttribute="centerY" id="jQQ-Sy-YKS"/>
+                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="leading" secondItem="EpP-7F-ZhC" secondAttribute="leadingMargin" id="lH6-q6-WyR"/>
+                                                <constraint firstItem="Nyl-hs-qwZ" firstAttribute="top" secondItem="EpP-7F-ZhC" secondAttribute="topMargin" constant="23" id="nvY-s1-QvO"/>
+                                                <constraint firstItem="cSB-cO-xsf" firstAttribute="bottom" secondItem="EpP-7F-ZhC" secondAttribute="bottomMargin" id="yJH-Da-ptY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -295,6 +306,7 @@
                         <outlet property="bestImageDisplay" destination="CIr-4H-3px" id="IFL-Pi-44e"/>
                         <outlet property="dragTheSliderDisplay" destination="gF4-yP-bI7" id="QJE-xx-Olm"/>
                         <outlet property="feedbackDisplay" destination="sN5-yJ-4dM" id="uFR-Ws-MzQ"/>
+                        <outlet property="noTouchId" destination="cSB-cO-xsf" id="R04-ef-ywU"/>
                         <outlet property="numberOfVideosToDisplay" destination="pSP-dq-VH8" id="Wy5-FE-Svs"/>
                         <outlet property="securityDisplay" destination="Nyl-hs-qwZ" id="fQK-U4-dWD"/>
                         <outlet property="sliderCnt" destination="fnz-2F-0fK" id="CM2-iv-vQT"/>
